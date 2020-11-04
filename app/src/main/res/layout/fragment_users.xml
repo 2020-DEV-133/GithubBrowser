@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.UserDetailsFragment">
+    tools:context=".ui.UsersFragment">
 
     <TextView
-        android:text="This is User Details Fragment"
+        android:text="This is Users Fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
