@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/repoSearchFragment"
-        android:name="com.meg.githubbrowser.ui.RepoSearchFragment"
+        android:name="com.debin.githubbrowser.ui.SearchFragment"
         android:label="fragment_repo_search"
-        tools:layout="@layout/fragment_repo_search" />
+        tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/userDeatilsFragment"
-        android:name="com.meg.githubbrowser.ui.UserDetailsFragment"
+        android:name="com.debin.githubbrowser.ui.UserDetailsFragment"
         android:label="fragment_user_deatils"
         tools:layout="@layout/fragment_user_details" />
     <fragment
         android:id="@+id/usersFragment"
-        android:name="com.meg.githubbrowser.ui.UsersFragment"
+        android:name="com.debin.githubbrowser.ui.UsersFragment"
         android:label="fragment_repo_users"
         tools:layout="@layout/fragment_users" />
 </navigation>

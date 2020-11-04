@@ -1,11 +1,9 @@
-package com.meg.githubbrowser
+package com.debin.githubbrowser
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_home.*
 

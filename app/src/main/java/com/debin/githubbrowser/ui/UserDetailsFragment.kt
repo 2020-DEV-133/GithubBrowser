@@ -1,21 +1,20 @@
-package com.meg.githubbrowser.ui
+package com.debin.githubbrowser.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.meg.githubbrowser.R
+import com.debin.githubbrowser.R
 
-
-class RepoSearchFragment : Fragment() {
+class UserDetailsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_repo_search, container, false)
+        return inflater.inflate(R.layout.fragment_user_details, container, false)
     }
 
 }

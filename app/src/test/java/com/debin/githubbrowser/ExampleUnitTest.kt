@@ -1,4 +1,4 @@
-package com.meg.githubbrowser
+package com.debin.githubbrowser
 
 import org.junit.Test
 
