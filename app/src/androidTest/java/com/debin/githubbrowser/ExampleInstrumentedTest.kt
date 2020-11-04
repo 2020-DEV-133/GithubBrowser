@@ -1,4 +1,4 @@
-package com.meg.githubbrowser
+package com.debin.githubbrowser
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
