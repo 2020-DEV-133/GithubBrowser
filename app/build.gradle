@@ -29,7 +29,13 @@ android {
         // for view binding :
         // viewBinding = true
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
+def koinVersion = "2.1.5"
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -57,7 +63,29 @@ dependencies {
     //http logging
     implementation("com.squareup.okhttp3:logging-interceptor:4.7.2")
 
+    // Koin AndroidX Scope feature
+    implementation "org.koin:koin-androidx-scope:${koinVersion}"
+
+    // Koin AndroidX ViewModel feature
+    implementation "org.koin:koin-androidx-viewmodel:${koinVersion}"
+    // Koin AndroidX Fragment Factory (unstable version)
+    implementation "org.koin:koin-androidx-fragment:${koinVersion}"
+    // Koin for Kotlin apps
+    implementation "org.koin:koin-core:${koinVersion}"
+    // Testing
+    implementation "org.koin:koin-test:${koinVersion}"
+    //VIEW MODEL
+    implementation "org.koin:koin-android-viewmodel:${koinVersion}"
+
     testImplementation 'junit:junit:4.12'
+    testImplementation "org.mockito:mockito-core:3.3.3"
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.8.1'
+    testImplementation 'com.nhaarman:mockito-kotlin-kt1.1:1.6.0'
+    // testImplementation for pure JVM unit tests
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.7"
+
+    // androidTestImplementation for Android instrumentation tests
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.7"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 

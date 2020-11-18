@@ -2,9 +2,6 @@ package com.debin.githubbrowser.datasource
 
 data class GitUser(
     val avatar_url: String,
-    val bio: String,
-    val blog: String,
-    val company: Any,
     val created_at: String,
     val email: Any,
     val events_url: String,
