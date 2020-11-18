@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.debin.githubbrowser.BaseFragment
 import com.debin.githubbrowser.HomeViewModel
@@ -28,8 +29,18 @@ class SearchFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
                viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-               binding.search = viewModel
+               binding.homeViewModel = viewModel
                binding.lifecycleOwner = this
+    }
+
+    private fun subscribeObserver() {
+        viewModel.userList.observe(viewLifecycleOwner, Observer {
+
+        })
+    }
+
+    private fun initViews() {
+
     }
 
 }
