@@ -40,6 +40,7 @@
         android:layout_margin="@dimen/dimen4"
         android:background="@color/colorAccent"
         android:src="@drawable/ic_search"
+        android:onClick="@{() -> homeViewModel.searchUser()}"
         android:contentDescription="@string/search_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

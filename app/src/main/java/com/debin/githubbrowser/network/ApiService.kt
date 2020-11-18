@@ -9,6 +9,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface ApiService {
-    @GET("users/username")
-      suspend fun searchUser(@Path("username") userName : String) : List<GitUser>
+    @GET("users/{username}")
+      suspend fun searchUser(@Path("username") userName : String) : GitUser
 }

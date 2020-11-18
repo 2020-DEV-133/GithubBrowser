@@ -7,5 +7,5 @@ import com.debin.githubbrowser.util.StateResponse
 import kotlinx.coroutines.flow.Flow
 
 interface SearchUserRepository {
-    suspend fun searchUser(userName : String) : Flow<StateResponse<List<GitUser>>>
+    suspend fun searchUser(userName : String) : Flow<StateResponse<GitUser>>
 }
