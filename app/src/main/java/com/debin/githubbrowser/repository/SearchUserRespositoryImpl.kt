@@ -1,8 +1,10 @@
 package com.debin.githubbrowser.repository
 
+import android.util.Log
 import com.debin.githubbrowser.datasource.GitUser
 import com.debin.githubbrowser.datasource.GitUserTest
 import com.debin.githubbrowser.network.ApiService
+import com.debin.githubbrowser.network.RetrofitInstance
 import com.debin.githubbrowser.util.StateResponse
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -16,10 +18,11 @@ class SearchUserRespositoryImpl(
     private val apiService: ApiService,
     val dispatcher: CoroutineDispatcher) : SearchUserRepository {
 
-    override suspend fun searchUser(userName: String): Flow<StateResponse<List<GitUser>>> {
-        return flow<StateResponse<List<GitUser>>> {
+    override suspend fun searchUser(userName: String): Flow<StateResponse<GitUser>> {
+        return flow<StateResponse<GitUser>> {
             emit(StateResponse.loading())
             val users = apiService.searchUser(userName)
+            println("The result is ::  ${users}")
             emit(StateResponse.success(users))
         }.retry(2) { exception ->
             (exception is Exception).also { if (it) delay(1000)}
